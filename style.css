@@ -1,0 +1,272 @@
+
+  /* 1. Use a more-intuitive box-sizing model. */
+  
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    font-family: Proxima Nova Regular,Helvetica Neue,Helvetica,Arial,sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  input {
+    font-family: Proxima Nova Regular,Helvetica Neue,Helvetica,Arial,sans-serif;
+  }
+
+  header {
+    
+        background: url("https://s.imgur.com/desktop-assets/desktop-assets/homebg.e52b5cdf24f83bcd55f9f1318855f2ef.png") no-repeat;
+        background-size: cover;
+        background-position: 50%;
+  }
+
+nav {
+      padding: 1em 1em;
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .left {
+    display: flex;
+    gap: 1em
+  }
+
+.left > button {
+    background-color: #1bb76e;
+    color: #fff;
+    border: 0;
+    text-align: center;
+    display: flex;
+    padding: 7px 14px 10px 9px;
+    border-radius: 3px;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    gap: 1em
+}
+
+
+.searchbarForm {
+    position: relative
+}
+
+#searchbar {
+    background-color:#454369;
+    padding: 8px 35px 8px 10px;
+    color: #fff;
+    border: 0;
+    border-radius: 3px;
+    outline: 0;
+    opacity: .8;
+    height: 36px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: .4px;
+    color: #fff;
+    text-shadow: inherit;
+    min-width: 550px;
+}
+
+#searchbar::placeholder {
+    color: #cecece;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.4;
+}
+
+.center button.submit {
+    position: absolute;
+    right: 0px;
+    /* border: 2px solid red; */
+    border: 0;
+    height: 100%;
+    width: auto;
+    color: #fff;
+    background-color: transparent;
+}
+
+.center button.submit > img {
+    color: #fff
+}
+
+.right>button:nth-child(1) {
+    background-color: #6432f9;
+    color: #fff;
+    padding: 0 10px 0 9px;
+    border: 0;
+    border-radius: 3px;
+    line-height: 35px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.notifications { 
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    display: flex;
+    gap: 0.65em
+}
+
+.notifications > * {
+}
+
+.usermenu {    
+    display: flex;
+    align-items: center;
+    color: #fff;
+    gap: 0.5em;
+}
+
+.usermenu > * {
+}
+
+.avatar {
+    background: url("https://imgur.com/user/devgurbir/avatar");
+    background-color: teal;
+    border-radius: 50%;
+    height: 37px;
+    width: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tags > h2 {
+    font-size: 24px;
+    font-family: Proxima Nova ExtraBold,Helvetica Neue,Helvetica,Arial,sans-serif;
+    letter-spacing: .6px;
+    color: #aed8ea;
+    text-align: center;
+    margin-top: 12px;
+    min-height: 34px;
+    position: relative;
+}
+
+.trendingTagsHeader {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 6px;
+    height: 31px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: .7;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 1.3px;
+    text-align: left;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.trendingTagsContent {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    gap: 0.5em;
+}
+
+.single-tag {
+    width: 110px;
+    height: 130px;
+    position: relative;
+    border-radius: 3px;
+}
+
+.tagInfo {
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* height: 50%; */
+    /* height: 40%; */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    /* gap: 1em; */
+    padding: 1em;
+    justify-content: center;
+    text-align: center;
+    background-color: royalblue;
+    
+}
+
+.tagTitle {
+    font-size: 14px;
+    line-height: 1.15;
+    letter-spacing: .4px;
+    color: #fff;
+    text-transform: capitalize;
+    word-break: break-word;
+}
+
+.tagPosts {
+    margin-top: 4px;
+    font-size: 11px;
+    line-height: 1.46;
+    letter-spacing: .4px;
+    color: hsla(0,0%,100%,.5);
+    
+}
+
+.trendingTags {
+    padding-bottom: 2rem;
+}
